@@ -7,5 +7,5 @@ Route::get('/', function () {
 });
 
 
-Route::webhooks('webhook-url-1', 'application-one');
-Route::webhooks('webhook-url-2', 'application-two');
+Route::webhooks('webhook-url-1', 'application-one','get');
+Route::webhooks('webhook-url-2', 'application-two','get');
