@@ -35,7 +35,7 @@ return [
             /*
              * This class determines if the webhook call should be stored and processed.
              */
-            'webhook_profile' => \App\Handler\Webhook_profile::class,
+            'webhook_profile' => \App\Handler\webhook_profile::class,
 
 
             /*
@@ -95,7 +95,7 @@ return [
             /*
              * This class determines if the webhook call should be stored and processed.
              */
-            'webhook_profile' => \App\Handler\Webhook_profile::class,
+            'webhook_profile' => \App\Handler\webhook_profile::class,
 
             /*
              * This class determines the response on a valid webhook call.
