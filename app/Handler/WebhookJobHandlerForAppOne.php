@@ -5,7 +5,6 @@ namespace App\Handler;
 use Spatie\WebhookClient\Jobs\ProcessWebhookJob;
 use App\Models\Test;
 
-
 class WebhookJobHandlerForAppOne extends ProcessWebhookJob
 {
     public function __construct(){
@@ -26,11 +25,8 @@ class WebhookJobHandlerForAppOne extends ProcessWebhookJob
         logger($this->webhookCall);
         sleep(10);
         logger("I am done");
-        $this->test::insert([
-            'test' => 'I am done',
-            
 
-        ]);
+        
 
     }
 }

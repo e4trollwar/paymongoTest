@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Spatie\WebhookClient\WebhookConfig;
 use Spatie\WebhookClient\SignatureValidator\SignatureValidator;
 
-class WebHookSignerHandlerForAppTwo implements SignatureValidator
+class signature_validator implements SignatureValidator
 {
     /**
      * Verify request signature
@@ -16,6 +16,8 @@ class WebHookSignerHandlerForAppTwo implements SignatureValidator
      */
     public function isValid(Request $request, WebhookConfig $config): bool
     {
+        
+        
         $signature = $request->header($config->signatureHeaderName); 
 
         /**

@@ -12,7 +12,7 @@ return [
              * This package supports multiple webhook receiving endpoints. If you only have
              * one endpoint receiving webhooks, you can use 'default'.
              */
-            'name' => 'Application-one',
+            'name' => 'application-one',
 
             /*
              * We expect that every webhook call will be signed using a secret. This secret
@@ -30,12 +30,13 @@ return [
              *
              * It should implement \Spatie\WebhookClient\SignatureValidator\SignatureValidator
              */
-            'signature_validator' => \Spatie\WebhookClient\SignatureValidator\DefaultSignatureValidator::class,
+            'signature_validator' => \App\Handler\signature_validator::class,
 
             /*
              * This class determines if the webhook call should be stored and processed.
              */
-            'webhook_profile' => \Spatie\WebhookClient\WebhookProfile\ProcessEverythingWebhookProfile::class,
+            'webhook_profile' => \App\Handler\Webhook_profile::class,
+
 
             /*
              * This class determines the response on a valid webhook call.
@@ -46,7 +47,8 @@ return [
              * The classname of the model to be used to store webhook calls. The class should
              * be equal or extend Spatie\WebhookClient\Models\WebhookCall.
              */
-            'webhook_model' => \Spatie\WebhookClient\Models\WebhookCall::class,
+            'webhook_model' => \App\Models\Test::class,
+
 
             /*
              * In this array, you can pass the headers that should be stored on
@@ -70,7 +72,7 @@ return [
          */
             [
 
-            'name' => 'Application-two',
+            'name' => 'application-two',
 
             /*
              * We expect that every webhook call will be signed using a secret. This secret
@@ -88,12 +90,12 @@ return [
              *
              * It should implement \Spatie\WebhookClient\SignatureValidator\SignatureValidator
              */
-            'signature_validator' => \App\Handler\WebHookSignerHandlerForAppTwo::class,
+            'signature_validator' => \App\Handler\signature_validator::class,
 
             /*
              * This class determines if the webhook call should be stored and processed.
              */
-            'webhook_profile' => \App\Handler\ShouldProcessCallHandler::class,
+            'webhook_profile' => \App\Handler\Webhook_profile::class,
 
             /*
              * This class determines the response on a valid webhook call.
@@ -121,7 +123,7 @@ return [
              *
              * This should be set to a class that extends \Spatie\WebhookClient\Jobs\ProcessWebhookJob.
              */
-            'process_webhook_job' =>  \App\Handler\WebhookJobHandlerForAppTwo::class,
+            'process_webhook_job' =>  \App\Handler\process_webhook_job::class,
         ],
     ],
 ];

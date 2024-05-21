@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class VerifyCsrfToken
 {
-    rotected $except = [
+    protected $except = [
         'webhook-url-1',
         'webhook-url-2',
     ];
