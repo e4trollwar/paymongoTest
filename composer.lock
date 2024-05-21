@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "31f28f204852f035f0dfbc5fa0a76f53",
+    "content-hash": "4624712dccff758cbd231e9cea515e41",
     "packages": [
         {
             "name": "brick/math",
@@ -3259,6 +3259,58 @@
                 }
             ],
             "time": "2024-04-25T14:09:05+00:00"
+        },
+        {
+            "name": "svix/svix",
+            "version": "v1.24.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/svix/svix-webhooks.git",
+                "reference": "2a8e93d2028a84a9399e82f398508d8dbf0c6a43"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/svix/svix-webhooks/zipball/2a8e93d2028a84a9399e82f398508d8dbf0c6a43",
+                "reference": "2a8e93d2028a84a9399e82f398508d8dbf0c6a43",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "phpstan/phpstan": "^0.12.89",
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Svix\\": "php/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Svix",
+                    "email": "support@svix.com",
+                    "homepage": "http://www.svix.com"
+                }
+            ],
+            "description": "Svix PHP Library",
+            "homepage": "https://www.svix.com",
+            "keywords": [
+                "api",
+                "webhooks"
+            ],
+            "support": {
+                "issues": "https://github.com/svix/svix-webhooks/issues",
+                "source": "https://github.com/svix/svix-webhooks/tree/v1.24.0"
+            },
+            "time": "2024-05-08T19:59:13+00:00"
         },
         {
             "name": "symfony/clock",

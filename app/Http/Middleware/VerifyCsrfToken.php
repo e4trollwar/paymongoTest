@@ -9,9 +9,8 @@ use Symfony\Component\HttpFoundation\Response;
 class VerifyCsrfToken
 {
     protected $except = [
-        'webhook-url-1',
-        'webhook-url-2',
-        'webhook/endpoint',
+        'paystack/webhook',
+        
     ];
     /**
      * Handle an incoming request.
