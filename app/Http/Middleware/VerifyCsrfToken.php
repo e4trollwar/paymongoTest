@@ -11,6 +11,7 @@ class VerifyCsrfToken
     protected $except = [
         'webhook-url-1',
         'webhook-url-2',
+        'webhook/endpoint',
     ];
     /**
      * Handle an incoming request.
