@@ -12,9 +12,12 @@ class WebhooksController extends Controller
         // Process webhook payload
         // Perform actions based on the webhook data
 
-        $this->test::insert([
+         return $request;
+        Test::insert([
             'test' => 'I am done',
         ]);
-        return $request;
+        return response()->json(['success' => true]);
+       
+       
     }
 }
