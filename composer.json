@@ -8,7 +8,9 @@
         "php": "^8.2",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
+        "spatie/laravel-stripe-webhooks": "^3.8",
         "spatie/laravel-webhook-client": "^3.3",
+        "stripe/stripe-php": "^14.7",
         "svix/svix": "^1.24"
     },
     "require-dev": {

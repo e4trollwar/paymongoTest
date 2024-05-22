@@ -13,20 +13,19 @@ return [
              * We expect that every webhook call will be signed using a secret. This secret
              * is used to verify that the payload has not been tampered with.
              */
-            'signing_secret' => env('PAYSTACK_SECRET_KEY'),
+            'signing_secret' => env('WEBHOOK_CLIENT_SECRET'),
 
             /*
              * The name of the header containing the signature.
              */
-            'signature_header_name' => 'x-paystack-signature',
+            'signature_header_name' => 'Signature',
 
             /*
              *  This class will verify that the content of the signature header is valid.
              *
              * It should implement \Spatie\WebhookClient\SignatureValidator\SignatureValidator
              */
-            // 'signature_validator' => \Spatie\WebhookClient\SignatureValidator\DefaultSignatureValidator::class,
-            'signature_validator' => App\Handler\PaystackSignature::class,
+            'signature_validator' => \Spatie\WebhookClient\SignatureValidator\DefaultSignatureValidator::class,
 
             /*
              * This class determines if the webhook call should be stored and processed.
@@ -50,21 +49,23 @@ return [
              *
              * To store all headers, set this value to `*`.
              */
-            'store_headers' => [],
+            'store_headers' => [
+
+            ],
 
             /*
              * The class name of the job that will process the webhook request.
              *
              * This should be set to a class that extends \Spatie\WebhookClient\Jobs\ProcessWebhookJob.
              */
-            'process_webhook_job' => App\Handler\ProcessWebhook::class,
-        ],        
+            'process_webhook_job' => '',
+        ],
     ],
-    
+
     /*
-     * The integer amount of days after which models should be deleted.
+     * The number of days after which models should be deleted.
      *
-     * 7 deletes all records after 1 week. Set to null if no models should be deleted.
+     * Set to null if no models should be deleted.
      */
     'delete_after_days' => 30,
 ];

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4624712dccff758cbd231e9cea515e41",
+    "content-hash": "c71e3ae86e7000df4e6203a436293681",
     "packages": [
         {
             "name": "brick/math",
@@ -3185,6 +3185,73 @@
             "time": "2024-03-20T07:29:11+00:00"
         },
         {
+            "name": "spatie/laravel-stripe-webhooks",
+            "version": "3.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-stripe-webhooks.git",
+                "reference": "48b3bbc46379add191a90a69d9c8579af963d790"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-stripe-webhooks/zipball/48b3bbc46379add191a90a69d9c8579af963d790",
+                "reference": "48b3bbc46379add191a90a69d9c8579af963d790",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^8.0|^9.0|^10.0|^11.0",
+                "php": "^8.0",
+                "spatie/laravel-webhook-client": "^3.0",
+                "stripe/stripe-php": "^7.51|^8.0|^9.0|^10.0|^11.0|^12.0|^13.0|^14.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0|^7.0|^8.0|^9.0",
+                "phpunit/phpunit": "^9.4|^10.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\StripeWebhooks\\StripeWebhooksServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\StripeWebhooks\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Handle stripe webhooks in a Laravel application",
+            "homepage": "https://github.com/spatie/laravel-stripe-webhooks",
+            "keywords": [
+                "laravel-stripe-webhooks",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-stripe-webhooks/issues",
+                "source": "https://github.com/spatie/laravel-stripe-webhooks/tree/3.8.0"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                }
+            ],
+            "time": "2024-05-02T09:36:41+00:00"
+        },
+        {
             "name": "spatie/laravel-webhook-client",
             "version": "3.3.2",
             "source": {
@@ -3259,6 +3326,65 @@
                 }
             ],
             "time": "2024-04-25T14:09:05+00:00"
+        },
+        {
+            "name": "stripe/stripe-php",
+            "version": "v14.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stripe/stripe-php.git",
+                "reference": "697d2222cb4479dabb1989d124c38d400046f2cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/697d2222cb4479dabb1989d124c38d400046f2cf",
+                "reference": "697d2222cb4479dabb1989d124c38d400046f2cf",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "3.5.0",
+                "phpstan/phpstan": "^1.2",
+                "phpunit/phpunit": "^5.7 || ^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stripe\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stripe and contributors",
+                    "homepage": "https://github.com/stripe/stripe-php/contributors"
+                }
+            ],
+            "description": "Stripe PHP Library",
+            "homepage": "https://stripe.com/",
+            "keywords": [
+                "api",
+                "payment processing",
+                "stripe"
+            ],
+            "support": {
+                "issues": "https://github.com/stripe/stripe-php/issues",
+                "source": "https://github.com/stripe/stripe-php/tree/v14.7.0"
+            },
+            "time": "2024-05-16T22:20:18+00:00"
         },
         {
             "name": "svix/svix",

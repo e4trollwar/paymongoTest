@@ -10,4 +10,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::webhooks('paystack/webhook');
+Route::webhooks('webhook-receiving-url');
+Route::stripeWebhooks('stripe-webhook');
