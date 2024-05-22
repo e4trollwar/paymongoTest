@@ -30,7 +30,7 @@ class ChargeSucceededJob implements ShouldQueue
     public function handle()
     {
         $charge = $this->webhookCall->payload['data']['object'];
-        $user = u
+        
         Payment::create([
             'user_id'=> '1',
             'user_id'=> $charge['id'],
